@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 400px;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<!-- src="https://ksc-bj.ag.wps.cn/api/object/2_cf7e784b929b4e4c9424e3d54f5befa1/compatible" -->
+<body>
+    <div class="video-container">
+        <video
+          id="video11" controls>
+          <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        </video>
+        <!-- <button onclick="play('video11')">play !!</button> -->
+    </div>
+<!-- 
+    <div class="video-container">
+        <video id="video2" controls>
+            <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <button onclick="toggleFullscreen('video2')">Full Screen</button>
+    </div>
+    
+    <div class="video-container">
+
+      <div id="video3">
+        <video src="https://ksc-bj-beta.ag.wps.cn/api/object/2_0d5975aefde74bfb887d169e396637ae/compatible" poster="https://ksc-bj-beta.ag.wps.cn/api/object/2_c47ab765be7644f783f232a5aef0c73b/compatible" class="mobile_video_body video_body" preload="metadata" webkit-playsinline="true" playsinline="true"></video>
+      </div>
+
+      <button onclick="toggleFullscreen('video3')">Full Screen</button>
+    </div> -->
+
+    <script>
+      function play(videoId) {
+        const video = document.getElementById(videoId);
+        video.play().then(() => {
+          console.warn(`~76 play ~`);
+        }).catch(err => {
+          console.warn(`~78 err`, err);
+        })
+      }
+
+
+    </script>
+</body>
+</html>
